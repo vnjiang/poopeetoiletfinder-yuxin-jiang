@@ -1,0 +1,96 @@
+/* PopupBox.css */
+.info-window {
+  font-family: 'Arial', sans-serif;
+  padding: 15px;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.info-window-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  text-align: left;
+}
+
+.info-window-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2d3436;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.info-window-description {
+  margin: 10px 0;
+  color: #636e72;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.info-window-rating,
+.info-window-price,
+.info-window-type,
+.info-window-distance {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #2d3436;
+}
+
+.info-window-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.info-window-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigate-button {
+  background: linear-gradient(45deg, #6c5ce7, #3d3dc7);
+  margin-right: 5px;
+}
+
+.review-button {
+  background: linear-gradient(45deg, #00cec9, #00a6a2);
+}
+
+.info-window-button:hover {
+  transform: translateY(-2px);
+}
+
+.info-window-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .info-window-card {
+    padding: 10px;
+  }
+
+  .info-window-title {
+    font-size: 16px;
+  }
+
+  .info-window-description {
+    font-size: 13px;
+  }
+
+  .info-window-buttons {
+    flex-direction: column;
+  }
+
+  .navigate-button,
+  .review-button {
+    margin: 5px 0;
+  }
+}
