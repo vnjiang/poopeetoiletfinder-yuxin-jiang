@@ -1,0 +1,193 @@
+.user-page {
+  padding: 20px;
+  background-color: #f5f6fa;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.user-page-user-info {
+  font-size: 16px;
+  background-color: #f5f6fa;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.user-page-title {
+  color: #6c63ff;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-page-user-info div {
+  font-size: 16px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.user-page-button {
+  display: block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #7967ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.user-page-button:hover {
+  background-color: #5445d6;
+}
+
+
+.user-page-review ul {
+  list-style-type: none;/*ensure there is no point in list*/
+  padding: 0;
+  margin: 0;
+  height: 47vh;
+  overflow-y: auto;
+}
+
+.user-page-review div {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.user-page-review li {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  word-wrap: break-word;
+}
+
+
+
+@media (max-width: 1200px) {
+  .user-page {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .user-page-user-info {
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .user-page-user-info div {
+    font-size: 15px;
+    margin-bottom: 10px
+  }
+
+  .user-page-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .user-page-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .user-page-review div {
+    font-size: 15px;
+  }
+
+  .user-page-review ul {
+    height: 49.5vh;
+  }
+
+
+  .user-page-review li {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-page {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .user-page-user-info {
+    padding: 10px;
+  }
+
+  .user-page-user-info div {
+    font-size: 14px;
+  }
+
+  .user-page-title {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  .user-page-button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .user-page-review div {
+    font-size: 14px;
+  }
+
+  .user-page-review ul {
+    height: 57vh;
+  }
+
+  .user-page-review li {
+    padding: 17px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .user-page {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .user-page-user-info {
+    padding: 8px;
+  }
+
+  .user-page-user-info div {
+    font-size: 13px;
+  }
+
+  .user-page-title {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .user-page-button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .user-page-review div {
+    font-size: 13px;
+  }
+
+  .user-page-review ul {
+    height: 63vh;
+  }
+
+  .user-page-review li {
+    padding: 15px;
+  }
+}

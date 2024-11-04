@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios'); //for http
-const SharedToilet = require('../models/SharedToilet');
-const Toilet = require('../models/toilet'); 
+const SharedToilet = require('../models/sharedToilet');
+const Toilet = require('../models/toilet');
 
 
+//transfer eircode from frontend form and return a location
 const transferEircodeToLocation = async (eircode) => {
   try {
     const response = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
@@ -14,6 +15,7 @@ const transferEircodeToLocation = async (eircode) => {
       }
     });
     const location = response.data.results[0].geometry.location;
+    //return the location data
     return {
       type: 'Point',
       coordinates: [location.lng, location.lat]
@@ -24,122 +26,134 @@ const transferEircodeToLocation = async (eircode) => {
 };
 
 
-//get shared toilet by filter approved-admin page
+//get shared toilet by approved_by_admin filter-can pass parameter on frontend
+//admin-page
 router.get('/', async (req, res) => {
   try {
-    const filter = req.query.approved_by_admin !== undefined 
-      ? { approved_by_admin: req.query.approved_by_admin } 
-      : {};
-    const approvedSharedToilet = await SharedToilet.find(filter);
-    res.json(approvedSharedToilet);
+    const filter = {
+      approved_by_admin: false, 
+      rejected: false 
+    };
+
+    res.json(await SharedToilet.find(filter));
   } catch (error) {
     console.log(error);
   }
 });
 
 
-/*
-//get shared toilet by filter user id
-router.get('/:id', async (req, res) => {
+
+//get shared toilet by user id
+//shared your toielt page
+router.get('/user/:userId', async (req, res) => {
   try {
-    const toiletWithUserId = await SharedToilet.find({ userId: req.query.userId });
-    res.json(toiletWithUserId);
+    res.json(await SharedToilet.find(req.params));
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 });
-*/
 
 
-//post sharedtoilet data-sharedtoilet page
+
+//post sharedtoilet data to data base
+//sharedtoilet page
 router.post('/', async (req, res) => {
   try {
     const location = await transferEircodeToLocation(req.body.eircode);
-    const newSharedToiletData = await new SharedToilet({
-      ...req.body, 
-      location  
-    }).save();
-    res.status(201).json(newSharedToiletData);
+    const newSharedToiletData = new SharedToilet({
+      ...req.body,
+      location,
+    });
+    res.json(await newSharedToiletData.save());
   } catch (error) {
-    console.log(error)
+    console.error(error);
   }
 });
 
 
 
 //update shared toilet info by id
+//shared toilet page
 router.put('/:id', async (req, res) => {
   try {
-    const { toilet_name, toilet_description, eircode, price, toilet_paper_accessibility, contact_number, approved_by_admin, userId } = req.body;
-    const updatedToilet = await SharedToilet.findByIdAndUpdate(
+    // reset approval status
+    const { approved_by_admin } = await SharedToilet.findById(req.params.id);
+    const updateData = approved_by_admin ? { ...req.body, approved_by_admin: false } : { ...req.body };
+
+    //Updated shared Toilet data in form
+    const updatedSharedToiletInForm = await SharedToilet.findByIdAndUpdate(
       req.params.id,
-      { $set: { toilet_name, toilet_description, eircode, price, toilet_paper_accessibility, contact_number, approved_by_admin, userId } },
+      { $set: updateData },
       { new: true, runValidators: true }
     );
 
-    if (approved_by_admin) {
-      const toiletData = {
-        toilet_id: updatedToilet._id.toString(),
-        toilet_name: updatedToilet.toilet_name,
-        toilet_description: updatedToilet.toilet_description,
-        eircode: updatedToilet.eircode,
-        price: updatedToilet.price,
-        toilet_paper_accessibility: updatedToilet.toilet_paper_accessibility,
-        contact_number: updatedToilet.contact_number,
-        location: updatedToilet.location,
-        userId: updatedToilet.userId,
-        type: 'shared'
-    };
-    
 
-      const newToilet = new Toilet(toiletData);
+    // If the toilet is approved, update it in the MongoDB toilets collection
+    if (req.body.approved_by_admin) {
+      // Find and delete the existing approved shared toilet in the toilets collection
+      await Toilet.findOneAndDelete({ place_id: updatedSharedToiletInForm._id.toString() });
+      // Insert the updated shared toilet into the toilets collection
+      const newToilet = new Toilet({
+        place_id: updatedSharedToiletInForm._id.toString(),
+        toilet_name: updatedSharedToiletInForm.toilet_name,
+        toilet_description: updatedSharedToiletInForm.toilet_description,
+        eircode: updatedSharedToiletInForm.eircode,
+        price: updatedSharedToiletInForm.price,
+        toilet_paper_accessibility: updatedSharedToiletInForm.toilet_paper_accessibility,
+        contact_number: updatedSharedToiletInForm.contact_number,
+        location: updatedSharedToiletInForm.location,
+        userId: updatedSharedToiletInForm.userId,
+        type: 'shared'
+      });
+
+      //save these updated data in mongoDB database
       await newToilet.save();
     }
 
-    res.json(updatedToilet);
+    // send the updated shared toilet data back as a json response
+    res.json(updatedSharedToiletInForm);
   } catch (error) {
-    console.log(error)
+    console.error(error);
   }
 });
+
+
+
+
+// for update admin page reject status
+router.put('/reject/:id', async (req, res) => {
+  try {
+    const updateRejectStatus = await SharedToilet.findByIdAndUpdate(
+      req.params.id,
+      { $set: { rejected: true } }, //set reject field to true
+      { new: true, runValidators: true }// return the updated document and run validation
+    );
+    res.status(200).json(updateRejectStatus);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 
 
 //delete toilet by id
+//shared toilet page
 router.delete('/:id', async (req, res) => {
   try {
-    await SharedToilet.findByIdAndDelete(req.params.id);
-    await Toilet.findOneAndDelete({ toilet_id: req.params.id });
-    res.status(204).end();
+     // 1. delete shared toilet data by id
+    const sharedToilet = await SharedToilet.findByIdAndDelete(req.params.id);
+    //2. make sure sharedToilet has been deleted , delete sharedToilet from toilets collection
+    if (sharedToilet) {
+      await Toilet.findOneAndDelete({ place_id: req.params.id });
+    }
+    res.status(200).json({ message: 'deleted successfully' });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 });
 
 
 
-/*
-//get approved toiletsahred
-router.get('/approved', async (req, res) => {
-  try {
-    const toilets = await SharedToilet.find({ approved_by_admin: true });
-    res.json(toilets);
-  } catch (error) {
-    console.log(error)
-  }
-});
-*/
-
-
-
-//get toilet by user id-shared your toielt page
-router.get('/user/:userId', async (req, res) => {
-  try {
-    const { userId } = req.params;
-    const toilets = await SharedToilet.find({ userId }); 
-    res.json(toilets);
-  } catch (error) {
-    console.log(error)
-  }
-});
 
 
 

@@ -1,0 +1,160 @@
+/*set the default style for HTML and body*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*set the style of admin div*/
+.admin {
+    margin-top: 0px;
+    background-color: #f5f6fa;
+    border-radius: 10px;/*round corner*/
+    height: 88vh;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+}
+
+.admin h3 {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.admin-item {
+    overflow-y: auto;/*ensure scolling bar*/
+    max-height: 83vh;/*use max hight to allow responsive design*/
+}
+
+
+.admin ul {
+    padding: 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;/*stack shared toilet items vertically*/
+}
+
+.admin li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a shadow for better visual */
+    background-color: #ffffff;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;/* include padding and border in element's total width and height */
+}
+
+.admin li>p {
+    margin: 3px 20px;
+    word-wrap: break-word;/* make sure long words don't break the container*/
+}
+
+.admin span {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 90%; 
+    width: 100%; 
+}
+
+.admin li>div {
+    display: flex;
+    justify-content: center;
+    background-color: ffffff;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    width: 90%;
+}
+
+
+.admin button {
+    width: 200px;
+    min-width: 45%;/*ensure these buttons won't stick together*/
+    padding: 8px 20px;
+    background-color: #7967ff;
+    cursor: pointer;/* change cursor to pointer when hover */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    border: none; /*remove default border */
+    margin-top: 10px;
+}
+
+
+.admin button:hover {
+    background-color: #5445d6;
+}
+
+
+
+
+/*responsive design*/
+/*when device width is less than 1000px, adjust the fontsize and padding */
+@media (max-width: 1200px) {
+    .admin h3 {
+        font-size: 17px;
+    }
+
+    .admin li {
+        font-size: 16px;
+    }
+
+    .admin button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+}
+
+
+/*for tablet like iPad*/
+/*when device width is less than 768px, adjust the fontsize and padding */
+@media (max-width: 768px) {
+    .admin h3 {
+        font-size: 16px;
+    }
+
+    .admin li {
+        font-size: 15px;
+    }
+
+    .admin button {
+        font-size: 15px;
+    }
+
+    .admin-item {
+        max-height: 85vh;
+    }
+}
+
+
+/*for smart phone or other device with smallar screen*/
+@media (max-width: 480px) {
+    .admin h3 {
+        font-size: 15px;
+    }
+
+    .admin li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .admin button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

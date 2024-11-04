@@ -1,0 +1,251 @@
+/*default css style*/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5f6fa;
+  color: #2d3436;
+  overflow-y: auto;
+}
+
+.main {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  height: auto;
+  min-height: calc(100vh - 90px); /*make sure header's height won't influece other component*/
+  overflow-y: hidden;
+  background-color: #f5f6fa; 
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+
+.map-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-left: 20px;
+  min-width: 60%;
+  position: relative; 
+  width: 100%;
+  height: calc(100vh - 90px);
+  min-height: 50vh;/* make sure the map is tall enough*/
+}
+
+
+.map-container .map {
+  width: 100%;
+  height: 100%;
+}
+
+
+  
+
+.all-toilet-list {
+  flex: 1;
+  min-width: 30%;
+  height: calc(100vh - 90px);
+  min-height: 50vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f5f6fa;
+  overflow-y: auto;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+
+/*make scoll mark invisible for better experience*/
+.all-toilet-list::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+  
+
+
+.button-container {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 10px; 
+  display: flex;
+  flex-direction: column;
+  z-index: 100;/*make sure buttons are on the top*/
+  gap: 10px;  
+  width:auto;
+  font-style: white;
+}
+
+.share-your-toilet-button,
+.to-curent-location-button {
+  padding: 12px 24px;
+  background-color: #7967ff;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.share-your-toilet-button:hover,
+.to-curent-location-button:hover {
+  background-color: #5445d6;
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+  .main {
+    display: flex;
+    flex-direction: row;/*On a large screen, the map and list are placed on a row*/
+  }
+
+  .map-container {
+    width: 65%; /*The width should also occupy only 65%*/
+  }
+
+  .all-toilet-list {
+    width: 35%;/*another 35% for list*/
+    overflow-y: auto;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;/*On small screens, the map and list need to be placed on column*/
+  }
+
+  .map-container {
+    min-width: 100%;/*The width should also occupy the entire screen*/
+    margin-bottom: 20px;
+    aspect-ratio: 1/1;/*make sure the map is a squre when in smallar device */
+    margin: 0;
+    height: 50vw;/*set the height of map as half of the window*/
+    max-height: 600px;/*but it cannot be too high*/
+  }
+
+  .all-toilet-list {
+    min-width: 100%;
+    height: auto; 
+    margin-right: 0;
+  }
+
+  .share-your-toilet-button, .to-curent-location-button {
+    padding: 11px 22px;
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+  }
+
+  .map-container {
+    height: 50vw;
+    max-height: 500px;
+    aspect-ratio: 1/1;
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .all-toilet-list {
+    min-width: 100%;
+    height: auto; 
+  }
+
+  .share-your-toilet-button, .to-curent-location-button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 5px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .map-container {
+    height: 50vw;
+    max-height: 500px;
+    aspect-ratio: 1/1;
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px; 
+  }
+
+  .all-toilet-list {
+    min-width: 100%;
+    height: auto; 
+  }
+
+  .share-your-toilet-button, .to-curent-location-button {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+}
+
+
+footer {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}

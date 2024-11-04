@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
   review_id: String,
-  toilet_id: String,
+  place_id: { type: String, required: true }, 
   user_id: String,
   user_name: String,
   rating: Number,

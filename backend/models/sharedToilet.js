@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// 定义 Location Schema
 const locationSchema = new mongoose.Schema({
   type: {
     type: String,
@@ -46,6 +45,10 @@ const sharedToiletSchema = new mongoose.Schema({
   approved_by_admin: {
     type: Boolean,
     default: false
+  },
+  rejected: {
+    type: Boolean,
+    default: false 
   }
 });
 

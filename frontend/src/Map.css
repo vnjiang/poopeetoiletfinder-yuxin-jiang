@@ -1,0 +1,131 @@
+.popupbox {
+  max-width: 250px;
+  word-wrap: break-word; 
+}
+
+
+.popupbox-card {
+  background-color: #ffffff;
+  padding: 10px 15px 20px 15px;
+  text-align: left;
+}
+
+.popupbox-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+  word-wrap: break-word; 
+}
+
+.popupbox-description {
+  margin: 10px 0;
+  color: #636e72;
+  font-size: 13px;
+  line-height: 1.2;/*make the gap between lines wider*/
+  word-wrap: break-word;
+}
+
+
+.popupbox-card h6{
+  margin: 8px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+
+.popupbox-rating {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+
+.popupbox-buttons {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: column;
+}
+
+
+
+.navigate-button {
+  background: #7967ff;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.review-button {
+  background: #7967ff;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navigate-button:hover {
+    background-color: #5445d6;
+}
+
+.review-button:hover {
+    background-color: #5445d6;
+}
+
+
+
+@media (max-width: 768px) {
+  .popupbox-title {
+    font-size: 16px;
+  }
+
+  .popupbox-description {
+    font-size: 13px;
+  }
+
+  .popupbox-buttons {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .navigate-button,
+  .review-button {
+    margin-bottom: 0px;
+    font-size: 13px;
+    padding: 9px 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .popupbox-title {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  .popupbox-description {
+    font-size: 12px;
+  }
+
+  .popupbox-buttons {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .navigate-button,
+  .review-button {
+    margin-bottom: 0px;
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+

@@ -1,103 +1,86 @@
 const express = require('express');
 const router = express.Router();
 const Review = require('../models/review');
-const Toilet = require('../models/toilet');
 
 
-router.get('/:toiletId', async (req, res) => {
+//fetch review data by its place_id
+router.get('/:place_id', async (req, res) => {
   try {
-    console.log('Fetching reviews for toilet ID:', req.params.toiletId); 
-    const toilet = await Toilet.findOne({ toilet_id: req.params.toiletId }).exec();
-    if (!toilet) {
-      console.log('Toilet not found');
-      return res.status(404).json({ message: 'Toilet not found' });
-    }
-
-    console.log('Toilet found:', toilet);
-    const reviews = await Review.find({ toilet_id: req.params.toiletId }).exec(); 
-    console.log('Reviews found:', reviews);
+    const reviews = await Review.find({ place_id: req.params.place_id });
     res.json(reviews);
   } catch (error) {
-    console.error('Error fetching reviews:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    console.error(error);
   }
 });
 
 
-
-router.get('/:toiletId/average-rating', async (req, res) => {
+//calculate toilet's average rating by its place_id
+//utils.js
+router.get('/:place_id/average-rating', async (req, res) => {
   try {
-    const { toiletId } = req.params;
-    
-    const result = await Review.aggregate([
-      { $match: { toilet_id: toiletId } },
-      { $group: { _id: "$toilet_id", averageRating: { $avg: "$rating" }, reviewCount: { $sum: 1 } } } // 添加 reviewCount
-    ]);
-
-    if (result.length > 0) {
-      res.json({ averageRating: result[0].averageRating, reviewCount: result[0].reviewCount }); // 返回 reviewCount
-    } else {
-      res.json({ averageRating: null, reviewCount: 0 }); // 如果没有评论，返回 0
+    const reviews = await Review.find({ place_id: req.params.place_id });
+    //add all rating together
+    let totalRating = 0;
+    for (const review of reviews) {
+      totalRating += review.rating;
     }
+    const reviewCount = reviews.length;
+    //calculate average rating if there is review
+    const averageRating = reviewCount > 0 ? totalRating / reviewCount : 0;
+    res.json({ averageRating, reviewCount });
   } catch (error) {
-    console.error('Error calculating average rating:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    console.error(error);
   }
 });
 
 
 
 
+//post reviews to review data base
 router.post('/', async (req, res) => {
-  try {
-    const { review_id, toilet_id, user_id, user_name, rating, comment, created_date } = req.body;
+  const { place_id, user_id, user_name, rating, comment } = req.body;
 
+  try {
+    //create new review and save to data base
     const newReview = new Review({
-      review_id,
-      toilet_id,
+      review_id: `review_${Date.now()}`,  
+      place_id,
       user_id,
-      user_name, 
+      user_name,
       rating,
       comment,
-      created_date: created_date || new Date()
+      created_date: new Date()  
     });
+    await newReview.save();
 
-    const savedReview = await newReview.save();
-    res.status(201).json(savedReview);
-  } catch (err) {
-    res.status(500).json({ message: 'Error creating review: ' + err.message });
+    res.status(201).json({ message: 'Review submitted successfully' });
+  } catch (error) {
+    console.error(error);
   }
 });
 
 
 
+//fetch review by user id 
+//user.js
 router.get('/user/:userId', async (req, res) => {
   try {
-    const reviews = await Review.find({ user_id: req.params.userId }).exec();
-    res.json(reviews);
+    const reviewDataByUserID = await Review.find({ user_id: req.params.userId });
+    res.json(reviewDataByUserID);
   } catch (error) {
-    console.error('Error fetching user reviews:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    console.error(error);
   }
 });
 
 
 
+//delete review by id
 router.delete('/:reviewId', async (req, res) => {
   try {
-    const { reviewId } = req.params;
-
-    const review = await Review.findById(reviewId);
-    if (!review) {
-      return res.status(404).json({ message: 'Review not found' });
-    }
-
-    await Review.findByIdAndDelete(reviewId);
-
-    res.status(204).send();
+    await Review.findByIdAndDelete(req.params.reviewId);
+    res.status(204).end();
   } catch (error) {
-    console.error('Error deleting review:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    console.error(error);
   }
 });
 
