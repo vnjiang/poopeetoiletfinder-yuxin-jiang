@@ -8,7 +8,7 @@ const Map = ({ center }) => {
   const [toilets, setToilets] = useState([]);
   const [map, setMap] = useState(null);
   //load google api key
-  const [scriptLoaded] = useScript('https://maps.googleapis.com/maps/api/js?key=REMOVED');
+  const [scriptLoaded] = useScript('https://maps.googleapis.com/maps/api/js?key=XXXXXX');
 
 
   //intialize map
@@ -39,7 +39,8 @@ const Map = ({ center }) => {
       map: map,
       position: { lat: toilet.location.coordinates[1], lng: toilet.location.coordinates[0] },
       icon: {
-        url: toilet.type === 'public' ? '/toilet.png' : '/sharedtoilet.png',
+        //url: toilet.type === 'public' ? '/toilet.png' : '/sharedtoilet.png',
+        url:  '/sharedtoilet.png',
         scaledSize: new window.google.maps.Size(50, 50),// Scale the icon to the desired size
         anchor: new window.google.maps.Point(20, 20),// Adjust the anchor point for correct positioning
       },
@@ -51,7 +52,7 @@ const Map = ({ center }) => {
   //function of open popuo box when a marker is clicked
   const popupboxAction = async (marker, center, toilet) => {
     const { averageRating, reviewCount } = await fetchRatingAndCount(toilet.place_id);
-    const infoWindowContent = popupboxContent(toilet, center, averageRating, reviewCount, toilet.price ? toilet.price.toFixed(2) : '?');
+    const infoWindowContent = popupboxContent(toilet, center, averageRating, reviewCount, toilet.price);
     const popupbox = new window.google.maps.InfoWindow();
 
     //add listener to marker
@@ -76,7 +77,7 @@ const Map = ({ center }) => {
           <p className="popupbox-rating">{renderStarAverageRatingCount(averageRating, reviewCount)}</p>
 
           <div>
-            <h6>Price: €{price}</h6>
+            <h6>Price: {price}</h6>
             <h6>Type:{toilet.type}</h6>
             <h6>
               Distance: {`${calculateDistance(center.lat, center.lng, toilet.location.coordinates[1], toilet.location.coordinates[0]).toFixed(2)} km`}

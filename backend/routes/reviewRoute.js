@@ -84,6 +84,11 @@ router.delete('/:reviewId', async (req, res) => {
   }
 });
 
+//后续补充的
+router.get('/', (req, res) => {
+  res.json({ message: "Review Route Working!" });
+});
+
 
 
 module.exports = router;

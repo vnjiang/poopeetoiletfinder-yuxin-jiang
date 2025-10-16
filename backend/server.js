@@ -20,6 +20,8 @@ app.use('/routes/reviewRoute', reviewRoute);
 
 // Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/graduate-project')
+// 如果 MongoDB 容器名为 'mongodb'
+//mongoose.connect('mongodb://172.17.0.2:27017/graduate-project')
 .then(() => console.log('MongoDB connected succesfully'))
 .catch(err => console.error('MongoDB connection error:', err));
 

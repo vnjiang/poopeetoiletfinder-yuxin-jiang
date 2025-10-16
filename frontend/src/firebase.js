@@ -4,7 +4,7 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 // config data from firebase platform
 const firebaseConfig = {
-  apiKey: "REMOVED",
+  apiKey: "XXXXXX",
   authDomain: "graduate-project-yuxin-ucc.firebaseapp.com",
   projectId: "graduate-project-yuxin-ucc",
   storageBucket: "graduate-project-yuxin-ucc.appspot.com",

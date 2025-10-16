@@ -10,7 +10,8 @@ const initSharedToiletForm = {
   toilet_name: '',
   toilet_description: '',
   eircode: '',
-  price: '',
+  type: 'free',  // 增加默认值
+  price: 'free',  // 增加默认价格
   toilet_paper_accessibility: false,
   contact_number: ''
 };
@@ -43,6 +44,7 @@ const SharedToiletPage = () => {
   //submit button toilet action
   const addSharedToiletAction = async (e) => {
     e.preventDefault();
+    console.log("Submit button clicked");
     try {
       //send request to post new shared toilet data
       const newSharedToiletRes = await axios.post('/routes/sharedToiletRoute', {
@@ -105,7 +107,7 @@ const SharedToiletPage = () => {
       setSharedToiletList(
         sharedToiletList.map(toilet => {
           if (toilet._id === editSharedToilet._id) {
-            return updatedSharedToiletDataRes.data; 
+            return updatedSharedToiletDataRes.data;
           } else {
             return toilet; //
           }
@@ -161,6 +163,8 @@ const SharedToiletPage = () => {
             placeholder="Eircode (e.g. D02 X285)"
             className="shared-toilet-page-input"
           />
+
+          {/*
           <input
             type="number"
             value={sharedToiletFormData.price}
@@ -169,6 +173,10 @@ const SharedToiletPage = () => {
             className="shared-toilet-page-input"
             max="20"
           />
+          */}
+
+
+
           <input
             type="number"
             value={sharedToiletFormData.contact_number}
@@ -177,6 +185,37 @@ const SharedToiletPage = () => {
             className="shared-toilet-page-input"
             maxLength="15"
           />
+
+
+          <label className="shared-toilet-page-availability">Type</label>
+          <select
+            value={sharedToiletFormData.type}
+            onChange={(e) => changeFormValue('type', e.target.value)}
+            className="shared-toilet-page-input"
+          >
+            <option value="free">Free</option>
+            <option value="free for customer">Free for Customer</option>
+            <option value="paid">Paid</option>
+          </select>
+
+          <label className="shared-toilet-page-availability">Price</label>
+          <select
+            value={sharedToiletFormData.price}
+            onChange={(e) => changeFormValue('price', e.target.value)}
+            className="shared-toilet-page-input"
+          >
+            <option value="free">Free</option>
+            <option value="free for customer">Free for Customer</option>
+            <option value="0.2 Euro">0.2 Euro</option>
+            <option value="0.5 Euro">0.5 Euro</option>
+            <option value="1 Euro">1 Euro</option>
+            <option value="1.5 Euro">1.5 Euro</option>
+            <option value="2 Euro">2 Euro</option>
+          </select>
+
+
+
+
           <label className="shared-toilet-page-availability">
             <input
               type="checkbox"
@@ -193,7 +232,7 @@ const SharedToiletPage = () => {
       <div className="shared-toilet-page-update">
         <div className="shared-toilet-page-title">Waiting For Verification First</div>
 
-         {/* display message if no toilets have been shared also ensure it is an array*/}
+        {/* display message if no toilets have been shared also ensure it is an array*/}
         {Array.isArray(sharedToiletList) && sharedToiletList.length === 0 ? (
           <div className="shared-toilet-page-empty">
             <p>Your Shared Toilets Will Show Here</p>

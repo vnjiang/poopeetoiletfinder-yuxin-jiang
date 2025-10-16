@@ -11,7 +11,7 @@ const transferEircodeToLocation = async (eircode) => {
     const response = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
       params: {
         address: eircode,
-        key: 'REMOVED'
+        key: 'XXXXXX'
       }
     });
     const location = response.data.results[0].geometry.location;
@@ -98,12 +98,14 @@ router.put('/:id', async (req, res) => {
         toilet_name: updatedSharedToiletInForm.toilet_name,
         toilet_description: updatedSharedToiletInForm.toilet_description,
         eircode: updatedSharedToiletInForm.eircode,
-        price: updatedSharedToiletInForm.price,
+
+        type: updatedSharedToiletInForm.type,  // 包含类型
+        price: updatedSharedToiletInForm.price, // 包含价格
+
         toilet_paper_accessibility: updatedSharedToiletInForm.toilet_paper_accessibility,
         contact_number: updatedSharedToiletInForm.contact_number,
         location: updatedSharedToiletInForm.location,
-        userId: updatedSharedToiletInForm.userId,
-        type: 'shared'
+        userId: updatedSharedToiletInForm.userId
       });
 
       //save these updated data in mongoDB database

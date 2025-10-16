@@ -22,14 +22,16 @@ const sharedToiletSchema = new mongoose.Schema({
   toilet_description: String,
   type: {
     type: String,
-    default: 'shared'
+    enum: ['free', 'free for customer', 'paid'],
+    required: true
   },
   eircode: {
     type: String,
     required: true
   },
   price: {
-    type: Number,
+    type: String,
+    enum: ['free', 'free for customer', '0.2 Euro', '0.5 Euro', '1 Euro', '1.5 Euro', '2 Euro'],
     required: true
   },
   toilet_paper_accessibility: Boolean,
