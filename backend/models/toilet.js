@@ -8,20 +8,30 @@ const toiletSchema = new mongoose.Schema({
     type: { type: String, enum: ['Point'], required: true },
     coordinates: { type: [Number], required: true }
   },
+
+  // 收费类型：只在这里区分 free / free for customer / paid
   type: {
     type: String,
     enum: ['free', 'free for customer', 'paid'],
     required: true
   },
+
   review_id: [String],
+
+  // 具体金额：只有 paid 的时候才需要
   price: {
     type: String,
-    enum: ['free', 'free for customer', '0.2 Euro', '0.5 Euro', '1 Euro', '1.5 Euro', '2 Euro'],
-    required: true
+    enum: ['€0.2', '€0.5', '€1', '€1.5', '€2'],   // ⚠️ 去掉 'free' 和 'free for customer'
+    required: function () {
+      return this.type === 'paid';               // 只有付费厕所必须填 price
+    }
   },
 
+  ratingAvg: { type: Number, default: 0 },
+  ratingCount: { type: Number, default: 0 },
   toilet_paper_accessibility: Boolean
 });
+
 
 
 

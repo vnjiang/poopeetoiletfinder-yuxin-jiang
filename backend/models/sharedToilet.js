@@ -31,8 +31,10 @@ const sharedToiletSchema = new mongoose.Schema({
   },
   price: {
     type: String,
-    enum: ['free', 'free for customer', '0.2 Euro', '0.5 Euro', '1 Euro', '1.5 Euro', '2 Euro'],
-    required: true
+    enum: ['€0.2', '€0.5', '€1', '€1.5', '€2'],
+    required: function () {
+      return this.type === 'paid';
+    }
   },
   toilet_paper_accessibility: Boolean,
   contact_number: {
@@ -51,6 +53,10 @@ const sharedToiletSchema = new mongoose.Schema({
   rejected: {
     type: Boolean,
     default: false 
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 });
 

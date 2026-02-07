@@ -1,57 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import Map from './Map';
-import AllToilet from './AllToilet';
-import RateAndReview from './RateAndReview';
-import WriteReview from './WriteReview';
-import Login from './Login';
-import Register from './Register';
-import SharedToiletPage from './SharedToiletPage';
-import User from './User';
-import Header from './Header';
-import Admin from './Admin';
-import { getUserLocation } from './utils';
-import { auth } from './firebase';
+import { Routes, Route, Navigate, useNavigate, BrowserRouter } from 'react-router-dom';
+import Map from './components/Map/Map';
+import AllToilet from './components/AllToilet/AllToilet';
+import ButtonGroup from './components/ButtonGroup/ButtonGroup';
+import Header from './components/Header/Header';
+
+import RateAndReview from './pages/RateAndReview/RateAndReview';
+import WriteReview from './pages/WriteReview/WriteReview';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import SharedToiletPage from './pages/SharedToiletPage/SharedToiletPage';
+import User from './pages/User/User';
+import Admin from './pages/Admin/Admin';
+
+import { getUserLocation } from './utils/utils';
+
+import { useAuth } from './context/authContext';
 import './App.css';
+
+
 
 const App = () => {
   const [center, setCenter] = useState(null);
-  const [user, setUser] = useState();
   const navigate = useNavigate();
+  const { user, role, loading } = useAuth();
 
-//fetch location
+
+  // fetch location
   useEffect(() => {
     getUserLocation(setCenter);
   }, []);
 
   // share toilet button navigate
   const sharedToiletButtonClick = () => {
-    if (user) {
-      navigate('/SharedToiletPage');
-    } else {
+    if (!user) {
       navigate('/login');
+      return;
     }
+
+    if (role !== 'commercial_owner') {
+      navigate('/user');
+      return;
+    }
+
+    navigate('/shared-your-toilet');
   };
 
 
-  // listening for authentication state changes
-  useEffect(() => {
-    const stopListenUserAuth = auth.onAuthStateChanged((currentUser) => {
-      try {
-        setUser(currentUser);
-      } catch (error) {
-        console.error(error);
-      }
-    });
-    return () => stopListenUserAuth();
-  }, []);
+  if (loading) return null;
 
 
   return (
-    <div className="container">
-      <div>
-        <Header />
-      </div>
+    <div className="app-root min-h-screen bg-white text-slate-800 flex flex-col">
+      <Header />
+
       <main className="main">
         <Routes>
           <Route
@@ -59,14 +61,12 @@ const App = () => {
             element={
               <>
                 <div className="map-container">
-                  <div className="button-container">
-                    <button className="share-your-toilet-button" onClick={sharedToiletButtonClick}>
-                      Share Your Toilet
-                    </button>
-                    <button className="to-curent-location-button" onClick={() => getUserLocation(setCenter)}>
-                      Current Location
-                    </button>
-                  </div>
+                  <ButtonGroup
+                    onShareClick={sharedToiletButtonClick}
+                    onLocateClick={() => getUserLocation(setCenter)}
+                    canShare={role === 'commercial_owner'}
+                  />
+
                   <div className="map">
                     <Map center={center} />
                   </div>
@@ -77,17 +77,30 @@ const App = () => {
               </>
             }
           />
-           {/* Define other routes and components */}
+
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/reviewRoute/:toiletId" element={<RateAndReview />} />
-          <Route path="/writeReview/:toiletId" element={<WriteReview />} />
-          <Route path="/SharedToiletPage" element={user ? <SharedToiletPage /> : <Navigate to="/login" />} />
+          <Route path="/rate-and-review/:toiletId" element={<RateAndReview />} />
+          <Route path="/write-review/:toiletId" element={<WriteReview />} />
+          <Route
+            path="/shared-your-toilet"
+            element={
+              !user ? (
+                <Navigate to="/login" />
+              ) : role === 'commercial_owner' ? (
+                <SharedToiletPage />
+              ) : (
+                <Navigate to="/user" />
+              )
+            }
+          />
+
           <Route path="/user" element={user ? <User /> : <Navigate to="/login" />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
-      <footer></footer>       {/*for future use*/}
+
+
     </div>
   );
 };

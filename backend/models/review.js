@@ -10,6 +10,8 @@ const reviewSchema = new mongoose.Schema({
   created_date: Date
 });
 
+reviewSchema.index({ place_id: 1 });
+
 const review = mongoose.model('review', reviewSchema);
 
 module.exports = review;

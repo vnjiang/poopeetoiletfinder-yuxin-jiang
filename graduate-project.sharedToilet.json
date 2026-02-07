@@ -1,0 +1,1248 @@
+[{
+  "_id": {
+    "$oid": "672abf3d4a29b0893830aa79"
+  },
+  "toilet_name": "Western Gateway Building",
+  "toilet_description": "In the center of ground floor",
+  "type": "free",
+  "eircode": "Western Gateway Building, Western Rd, Mardyke, Cork",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.499968599999999,
+      51.893372
+    ],
+    "_id": {
+      "$oid": "672abf3d4a29b0893830aa7a"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672abfcf4a29b0893830aa82"
+  },
+  "toilet_name": "Costa Coffee Mount Agnes Road",
+  "toilet_description": "Churchfield Rd, Cork",
+  "type": "free for customer",
+  "eircode": "Costa Coffee Mount Agnes Road,Churchfield Rd, Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.489364499999999,
+      51.9120935
+    ],
+    "_id": {
+      "$oid": "672abfcf4a29b0893830aa83"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672abf8f4a29b0893830aa7c"
+  },
+  "toilet_name": "Costa Coffee",
+  "toilet_description": "Turners Cross Retail Park, Kinsale Rd, Cork",
+  "type": "free for customer",
+  "eircode": "T12 CPR4",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.466261099999999,
+      51.8804035
+    ],
+    "_id": {
+      "$oid": "672abf8f4a29b0893830aa7d"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac08d4a29b0893830aabe"
+  },
+  "toilet_name": "Costa Coffee",
+  "toilet_description": "Eastgate Retail Park, Little Island, Co. Cork",
+  "type": "free for customer",
+  "eircode": "T45 KX06",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.3571828,
+      51.9041673
+    ],
+    "_id": {
+      "$oid": "672ac08d4a29b0893830aabf"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672abf0f4a29b0893830aa76"
+  },
+  "toilet_name": "Noodlee",
+  "toilet_description": "Free for customers only",
+  "type": "free for customer",
+  "eircode": "T12 Y2NF",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4950022,
+      51.8944792
+    ],
+    "_id": {
+      "$oid": "672abf0f4a29b0893830aa77"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac0c94a29b0893830aac1"
+  },
+  "toilet_name": "Mahon Point Shopping Centre",
+  "toilet_description": "Mahon Link Road, Mahon, Cork",
+  "type": "free",
+  "eircode": "T12 X7HK",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.3962614,
+      51.8859194
+    ],
+    "_id": {
+      "$oid": "672ac0c94a29b0893830aac2"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ab0504a29b0893830aa5a"
+  },
+  "toilet_name": "Witon Shopping Center",
+  "toilet_description": "Near An Post Bishopstown",
+  "type": "free",
+  "eircode": "T12 TV02",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5080977,
+      51.8806528
+    ],
+    "_id": {
+      "$oid": "672ab0504a29b0893830aa5b"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac1684a29b0893830aae9"
+  },
+  "toilet_name": "Zambrero",
+  "toilet_description": "Orchard Gardens, Dennehys Cross, Cork",
+  "type": "free for customer",
+  "eircode": "T12 E3TD",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5062283,
+      51.88915290000001
+    ],
+    "_id": {
+      "$oid": "672ac1684a29b0893830aaea"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac1394a29b0893830aae6"
+  },
+  "toilet_name": "Tesco Superstore",
+  "toilet_description": "Located on the left side of the supermarket entrance inside the building, following the signs on the ceiling",
+  "type": "free",
+  "eircode": "T12 VNP3",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4747623,
+      51.8997074
+    ],
+    "_id": {
+      "$oid": "672ac1394a29b0893830aae7"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac1ba4a29b0893830aaec"
+  },
+  "toilet_name": "Centra Victoria Cross (unavailable)",
+  "toilet_description": "Currently out of order",
+  "type": "free for customer",
+  "eircode": " T12 FT6P",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5037416,
+      51.8926149
+    ],
+    "_id": {
+      "$oid": "672ac1ba4a29b0893830aaed"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac1f44a29b0893830ab1d"
+  },
+  "toilet_name": "The English Market",
+  "toilet_description": "might be crowded",
+  "type": "paid",
+  "eircode": "The English Market, Grand Parade, Centre, Cork",
+  "price": "0.2 Euro",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4748223,
+      51.8976504
+    ],
+    "_id": {
+      "$oid": "672ac1f44a29b0893830ab1e"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac2284a29b0893830ab20"
+  },
+  "toilet_name": "Dunnes Stores",
+  "toilet_description": "take lift to the top floor",
+  "type": "free",
+  "eircode": " T12 P718",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4716598,
+      51.8989074
+    ],
+    "_id": {
+      "$oid": "672ac2284a29b0893830ab21"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac3324a29b0893830ab24"
+  },
+  "toilet_name": "Public Toilets",
+  "toilet_description": "might be crowded",
+  "type": "free",
+  "eircode": "17 Roger Casement Square, Ballyvoloon, Cobh, Co. Cork",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.2950552,
+      51.8504062
+    ],
+    "_id": {
+      "$oid": "672ac3324a29b0893830ab25"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac3744a29b0893830ab5b"
+  },
+  "toilet_name": "Blackbird Bar, Ballycotton",
+  "toilet_description": "Free for customer",
+  "type": "free for customer",
+  "eircode": "P25 D580",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.013878,
+      51.830633
+    ],
+    "_id": {
+      "$oid": "672ac3744a29b0893830ab5c"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac3f24a29b0893830ab5e"
+  },
+  "toilet_name": "Ryans Pub Cobh",
+  "toilet_description": "Free for customers",
+  "type": "free for customer",
+  "eircode": "Ryans Pub Cobh,Casement Square, Ballyvoloon, Cobh, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.2949474,
+      51.8504947
+    ],
+    "_id": {
+      "$oid": "672ac3f24a29b0893830ab5f"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac48d4a29b0893830ab61"
+  },
+  "toilet_name": "The Lough Café",
+  "toilet_description": "1b The, Lough Rd, The Lough, Cork, T12 YR99",
+  "type": "free for customer",
+  "eircode": "T12 YR99",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4844336,
+      51.8895417
+    ],
+    "_id": {
+      "$oid": "672ac48d4a29b0893830ab62"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac5294a29b0893830ab9e"
+  },
+  "toilet_name": "Munster Technological University",
+  "toilet_description": "There are toilets in every building",
+  "type": "free",
+  "eircode": "Rossa Ave, Bishopstown, Cork, T12 P928",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.53082,
+      51.8821
+    ],
+    "_id": {
+      "$oid": "672ac5294a29b0893830ab9f"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac7ac4a29b0893830abd1"
+  },
+  "toilet_name": "Thurles Shopping Centre",
+  "toilet_description": "on the first floor",
+  "type": "free",
+  "eircode": "Thurles Shopping Centre,Slievenamon Rd, Thurles Townparks, Thurles, Co. Tipperary",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.811545400000001,
+      52.67510679999999
+    ],
+    "_id": {
+      "$oid": "672ac7ac4a29b0893830abd2"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac86d4a29b0893830ac09"
+  },
+  "toilet_name": "Barry's SuperValu Thurles",
+  "toilet_description": "Friar St, Thurles Townparks, Thurles, Co. Tipperary, ",
+  "type": "free",
+  "eircode": "E41 EF10",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.818456,
+      52.6782373
+    ],
+    "_id": {
+      "$oid": "672ac86d4a29b0893830ac0a"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac8b74a29b0893830ac37"
+  },
+  "toilet_name": "Marina Market",
+  "toilet_description": "might be crowded",
+  "type": "free",
+  "eircode": "T12 YX76",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4518854,
+      51.8988267
+    ],
+    "_id": {
+      "$oid": "672ac8b74a29b0893830ac38"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac0124a29b0893830aa85"
+  },
+  "toilet_name": "Costa Coffee",
+  "toilet_description": "City East Retail Park, Ballysimon Rd, Garryglass, Limerick",
+  "type": "free for customer",
+  "eircode": "Costa Coffee,City East Retail Park, Ballysimon Rd, Garryglass, Limerick",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5745919,
+      52.6492502
+    ],
+    "_id": {
+      "$oid": "672ac0124a29b0893830aa86"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672acab24a29b0893830ace0"
+  },
+  "toilet_name": "Douglas Court Shopping Centre",
+  "toilet_description": "Douglas Court Shopping Centre, Cork T12 HK5D",
+  "type": "free",
+  "eircode": "T12 HK5D",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.431557,
+      51.8784465
+    ],
+    "_id": {
+      "$oid": "672acab24a29b0893830ace1"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672ac9ac4a29b0893830aca5"
+  },
+  "toilet_name": "Ballyvolane Shopping Centre",
+  "toilet_description": "Ballyvolane, Cork, T23 VEY8",
+  "type": "free",
+  "eircode": "Ballyvolane, Cork, T23 VEY8",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4477625,
+      51.9163297
+    ],
+    "_id": {
+      "$oid": "672ac9ac4a29b0893830aca6"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672acaf04a29b0893830ace3"
+  },
+  "toilet_name": "Blackpool Shopping Centre",
+  "toilet_description": "Blackpool Shopping Center, Blackpool, Cork",
+  "type": "free",
+  "eircode": "Blackpool Shopping Center, Blackpool, Cork",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4714678,
+      51.9148381
+    ],
+    "_id": {
+      "$oid": "672acaf04a29b0893830ace4"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672acdca4a29b0893830adac"
+  },
+  "toilet_name": "The Spaniard Inn",
+  "toilet_description": "Scilly, Kinsale, Co. Cork",
+  "type": "free for customer",
+  "eircode": "The Spaniard Inn,Scilly, Kinsale, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5168716,
+      51.7050153
+    ],
+    "_id": {
+      "$oid": "672acdca4a29b0893830adad"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672acbe34a29b0893830ad28"
+  },
+  "toilet_name": "Fota Wildlife Park",
+  "toilet_description": "The toilets are spread out across the park",
+  "type": "free for customer",
+  "eircode": "Fota Wildlife Park, Fota, Carrigtwohill, Co. Cork, T45 CD93",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.3069536,
+      51.89087379999999
+    ],
+    "_id": {
+      "$oid": "672acbe34a29b0893830ad29"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672accea4a29b0893830ad69"
+  },
+  "toilet_name": "Old Oak",
+  "toilet_description": "113 Oliver Plunkett St, Centre, Cork, T12 PY8A",
+  "type": "free for customer",
+  "eircode": "113 Oliver Plunkett St, Centre, Cork, T12 PY8A",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4700185,
+      51.8981685
+    ],
+    "_id": {
+      "$oid": "672accea4a29b0893830ad6a"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672bfc5f4a29b0893830af3d"
+  },
+  "toilet_name": "KFC Cork - East Gate Retail Park",
+  "toilet_description": "located on the left side after entering, customers only",
+  "type": "free for customer",
+  "eircode": "T45 A363",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.354104099999999,
+      51.9049925
+    ],
+    "_id": {
+      "$oid": "672bfc5f4a29b0893830af3e"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672aceb64a29b0893830adb1"
+  },
+  "toilet_name": "Cosy Café",
+  "toilet_description": "Church Square, Town-Plots, Kinsale, Co. Cork, P17 PK21",
+  "type": "free for customer",
+  "eircode": "Church Square, Town-Plots, Kinsale, Co. Cork, P17 PK21",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5258532,
+      51.7061791
+    ],
+    "_id": {
+      "$oid": "672aceb64a29b0893830adb2"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672c12904a29b0893830b012"
+  },
+  "toilet_name": "Merchant's Quay Shopping Centre",
+  "toilet_description": "on the first floor",
+  "type": "free",
+  "eircode": "1-5 St Patrick's St, Centre, Cork, T12 ERW9",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.4694712,
+      51.8999604
+    ],
+    "_id": {
+      "$oid": "672c12904a29b0893830b013"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672bfe334a29b0893830af86"
+  },
+  "toilet_name": "Spar",
+  "toilet_description": "Free for customer",
+  "type": "free for customer",
+  "eircode": "Spar, Eastgate Business Park, Little Island, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.3581535,
+      51.902912
+    ],
+    "_id": {
+      "$oid": "672bfe334a29b0893830af87"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672c20474a29b0893830b05f"
+  },
+  "toilet_name": "Cobh Heritage Centre",
+  "toilet_description": "Usually for customer use",
+  "type": "free for customer",
+  "eircode": "The Queenstown Story @ Cobh Heritage Centre Deepwater Quay Tel 021 4813591 Deepwater Quay, Cobh, Co. Cork, P24 CY67",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.2989737,
+      51.8489477
+    ],
+    "_id": {
+      "$oid": "672c20474a29b0893830b060"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672c42984a29b0893830b1d3"
+  },
+  "toilet_name": "Passage West Maritime Museum",
+  "toilet_description": "It’s a free toilet beside museum ",
+  "type": "free",
+  "eircode": "T12X4AX",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "0830924931",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.336422299999999,
+      51.8722989
+    ],
+    "_id": {
+      "$oid": "672c42984a29b0893830b1d4"
+    }
+  },
+  "userId": "2z04288GfQgaQR7bRSpXNVMF1Ws1",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732a6544a29b0893830b597"
+  },
+  "toilet_name": "MacDonagh Junction Shopping Centre",
+  "toilet_description": "Several toilets are available inside",
+  "type": "free",
+  "eircode": "MacDonagh Junction Shopping Centre,Hebron Rd, Highhays, Kilkenny ",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.244462,
+      52.6552401
+    ],
+    "_id": {
+      "$oid": "6732a6544a29b0893830b598"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732a8004a29b0893830b682"
+  },
+  "toilet_name": "Toilet",
+  "toilet_description": "Public toilet, 50 cents per use",
+  "type": "paid",
+  "eircode": "toilet, b1 The Parade, Gardens, Kilkenny",
+  "price": "0.5 Euro",
+  "toilet_paper_accessibility": false,
+  "contact_number": "111111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.251176300000001,
+      52.6504296
+    ],
+    "_id": {
+      "$oid": "6732a8004a29b0893830b683"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b0714a29b0893830b797"
+  },
+  "toilet_name": "McDonald's",
+  "toilet_description": "Free for customers",
+  "type": "free for customer",
+  "eircode": "McDonald's, Hebron Rd, Garrincreen, Kilkenny",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.226612799999999,
+      52.6585382
+    ],
+    "_id": {
+      "$oid": "6732b0714a29b0893830b798"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732ab8b4a29b0893830b6d7"
+  },
+  "toilet_name": "Dunnes Stores",
+  "toilet_description": "Opening hours: 08:00 - 21:00",
+  "type": "free",
+  "eircode": "Dunnes Stores,St Kieran's St, Gardens, Kilkenny, R95 PF82",
+  "price": "free",
+  "toilet_paper_accessibility": true,
+  "contact_number": "111111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.252089000000001,
+      52.652673
+    ],
+    "_id": {
+      "$oid": "6732ab8b4a29b0893830b6d8"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b2434a29b0893830b7fb"
+  },
+  "toilet_name": "Cafe La Coco",
+  "toilet_description": "Free for customers",
+  "type": "free for customer",
+  "eircode": "4 Lower Patrick St, Gardens, Kilkenny, R95 YV6X",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "111111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.2516348,
+      52.6497275
+    ],
+    "_id": {
+      "$oid": "6732b2434a29b0893830b7fc"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b2f54a29b0893830b858"
+  },
+  "toilet_name": "The Black Cat Cafe Kilkenny",
+  "toilet_description": "The toilet has a code lock and is located on the top floor of Intersport Elverys.",
+  "type": "free for customer",
+  "eircode": "Parliament St, Gardens, Kilkenny, R95 X8NN",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "111111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.25439,
+      52.65423
+    ],
+    "_id": {
+      "$oid": "6732b2f54a29b0893830b859"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b1b94a29b0893830b79a"
+  },
+  "toilet_name": "The Yard Café",
+  "toilet_description": "Free for customer only",
+  "type": "free for customer",
+  "eircode": "27 St Kieran's St, Gardens, Kilkenny, R95 WRR4",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.2534994,
+      52.6533423
+    ],
+    "_id": {
+      "$oid": "6732b1b94a29b0893830b79b"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b5bf4a29b0893830b8b7"
+  },
+  "toilet_name": "Kilkenny Design Centre",
+  "toilet_description": "the toilet is located inside the restaurant or café within the center",
+  "type": "free",
+  "eircode": "The Castle Yard, The Parade, Gardens, Kilkenny, R95 CAA6",
+  "price": "free",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -7.2489997,
+      52.6497708
+    ],
+    "_id": {
+      "$oid": "6732b5bf4a29b0893830b8b8"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67547cf12f3f5b6b76b51640"
+  },
+  "toilet_name": "The Gallery Bar & Restaurant",
+  "toilet_description": "customer only",
+  "type": "free for customer",
+  "eircode": "The Gallery Bar & Restaurant Castlelands, St Joseph's Rd, Mallow, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.6399166,
+      52.1355116
+    ],
+    "_id": {
+      "$oid": "67547cf12f3f5b6b76b51641"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67547d4d2f3f5b6b76b516a5"
+  },
+  "toilet_name": "Bella Cafe Mallow",
+  "toilet_description": "for customer only",
+  "type": "free for customer",
+  "eircode": "111 Thomas Davis St, Mallow, Co. Cork, P51 W583",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.6426234,
+      52.1360232
+    ],
+    "_id": {
+      "$oid": "67547d4d2f3f5b6b76b516a6"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67547d9d2f3f5b6b76b516a8"
+  },
+  "toilet_name": "The Arches Bar & Restaurant",
+  "toilet_description": "customer only",
+  "type": "free for customer",
+  "eircode": "The Arches Bar & Restaurant Bellevue, Mallow, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.6454925,
+      52.131936
+    ],
+    "_id": {
+      "$oid": "67547d9d2f3f5b6b76b516a9"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "672abfb14a29b0893830aa7f"
+  },
+  "toilet_name": "T12 CPR4",
+  "toilet_description": "Bishopstown Rd, Bishopstown, Cork",
+  "type": "free for customer",
+  "eircode": "T12 RC81",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "1111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.5131344,
+      51.8805631
+    ],
+    "_id": {
+      "$oid": "672abfb14a29b0893830aa80"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67547f532f3f5b6b76b516ab"
+  },
+  "toilet_name": "Globe Cafe Mallow",
+  "toilet_description": "customer only",
+  "type": "free for customer",
+  "eircode": "Bank Place, Mallow, Co. Cork, P51 C786",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.6464986,
+      52.13760749999999
+    ],
+    "_id": {
+      "$oid": "67547f532f3f5b6b76b516ac"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67547f722f3f5b6b76b516ae"
+  },
+  "toilet_name": "Costa Coffee",
+  "toilet_description": "customer only",
+  "type": "free for customer",
+  "eircode": "Costa Coffee William O'Brien St, Mallow, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": true,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.6417351,
+      52.1376557
+    ],
+    "_id": {
+      "$oid": "67547f722f3f5b6b76b516af"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6732b7214a29b0893830b918"
+  },
+  "toilet_name": "EUROSPAR",
+  "toilet_description": "free for cutsomers",
+  "type": "free for customer",
+  "eircode": "EUROSPAR,Newtown Rd, Ringmeen, Cobh, Co. Cork",
+  "price": "free for customer",
+  "toilet_paper_accessibility": false,
+  "contact_number": "11111",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -8.3036175,
+      51.8537252
+    ],
+    "_id": {
+      "$oid": "6732b7214a29b0893830b919"
+    }
+  },
+  "userId": "VJUGbMaqPYYE1Kf9hh5AqzxWjIf2",
+  "approved_by_admin": true,
+  "rejected": true,
+  "__v": 0
+}]

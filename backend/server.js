@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -5,6 +6,8 @@ const sharedToiletRoute = require('./routes/sharedToiletRoute');
 const toiletRoute = require('./routes/toiletRoute'); 
 const reviewRoute = require('./routes/reviewRoute'); 
 const path = require('path');
+
+
 
 
 const app = express();
@@ -19,16 +22,23 @@ app.use('/routes/sharedToiletRoute', sharedToiletRoute);
 app.use('/routes/reviewRoute', reviewRoute);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/graduate-project')
-// 如果 MongoDB 容器名为 'mongodb'
-//mongoose.connect('mongodb://172.17.0.2:27017/graduate-project')
+mongoose.connect(process.env.MONGO_URI)
+
 .then(() => console.log('MongoDB connected succesfully'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-app.use(express.static(path.join(__dirname, 'build')));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+}
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+
+
+app.get("/health", (req, res) => {
+  res.status(200).json({ ok: true, ts: Date.now() });
 });
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
