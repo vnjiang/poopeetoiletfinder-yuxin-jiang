@@ -111,7 +111,9 @@ export const useGoogleMap = ({
 
         setMarkersReady(true);
         updateMarkersByZoom();
-
+        const zoomListener = mapRef.current.addListener('zoom_changed', () => {
+            updateMarkersByZoom();
+        });
 
         return () => {
             markerListenersRef.current.forEach(l => l.remove());
