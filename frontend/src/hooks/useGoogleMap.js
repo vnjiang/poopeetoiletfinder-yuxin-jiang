@@ -116,6 +116,8 @@ export const useGoogleMap = ({
         });
 
         return () => {
+            zoomListener?.remove?.();
+
             markerListenersRef.current.forEach(l => l.remove());
             markersRef.current.forEach(m => m.setMap(null));
 
@@ -128,5 +130,5 @@ export const useGoogleMap = ({
     }, [toilets, center, ratingsMap, renderPopup, makePinIcon, updateMarkersByZoom]);
 
 
-    return { containerRef };
+    return { containerRef, markersReady };
 };
