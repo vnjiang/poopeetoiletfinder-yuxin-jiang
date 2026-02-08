@@ -12,15 +12,13 @@ jobs:
   test-and-build:
     runs-on: ubuntu-latest
     env:
-      # 你的一些路由在 import 时会读这个 key；CI 用 dummy 就够
+
       GOOGLE_GEOCODING_API_KEY: test-key
       NODE_ENV: test
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # v4 在 Marketplace 上是主流稳定用法
-      # 你也可以升到 v5，但要确保 runner 版本满足要求
-      # 参考：actions/checkout 的 release/runner 兼容说明 :contentReference[oaicite:1]{index=1}
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -28,16 +26,39 @@ jobs:
           node-version: "20"
           cache: "npm"
 
+          cache-dependency-path: |
+            frontend/package-lock.json
+            backend/package-lock.json
+
+
+      - name: Install (frontend)
+        if: ${{ hashFiles('frontend/package.json') != '' }}
+        working-directory: frontend
+        run: npm ci
+
+      - name: Test (frontend)
+        if: ${{ hashFiles('frontend/package.json') != '' }}
+        working-directory: frontend
+        run: npm run test:ci
+
+      - name: Build (frontend)
+        if: ${{ hashFiles('frontend/package.json') != '' }}
+        working-directory: frontend
+        run: npm run build
+
+
       - name: Install (root)
+        if: ${{ hashFiles('frontend/package.json') == '' && hashFiles('package.json') != '' }}
         run: npm ci
 
       - name: Test (root)
+        if: ${{ hashFiles('frontend/package.json') == '' && hashFiles('package.json') != '' }}
         run: npm run test:ci
 
       - name: Build (root)
+        if: ${{ hashFiles('frontend/package.json') == '' && hashFiles('package.json') != '' }}
         run: npm run build
 
-      # 如果你的后端在 backend/ 里也有 package.json，就一起跑
       - name: Install (backend)
         if: ${{ hashFiles('backend/package.json') != '' }}
         working-directory: backend
